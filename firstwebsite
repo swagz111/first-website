@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>My Website</title>
+   <style>
+       body {
+           font-family: Arial, sans-serif;
+           margin: 40px;
+           background-color: #f8f8f8;
+       }
+       h1 {
+           color: #333;
+       }
+       p {
+           color: #666;
+       }
+   </style>
+   <script>
+       function changeParagraphColor() {
+           document.getElementById("myParagraph").style.color = "blue";
+       }
+
+       window.onload = function() {
+           alert("Welcome to my website!");
+       };
+   </script>
+</head>
+<body>
+   <h1>Welcome to My Website</h1>
+   <p id="myParagraph">Work in progress!</p>
+   <button onclick="changeParagraphColor()">Change Color</button>
+</body>
+</html>
