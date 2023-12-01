@@ -21,7 +21,7 @@
            var currentColor = paragraph.style.color;
            var originalColor = window.getComputedStyle(paragraph).getPropertyValue("color");
 
-           if (currentColor === "blue") {
+           if (currentColor === "blue" || currentColor === "") {
                paragraph.style.color = originalColor;
            } else {
                paragraph.style.color = "blue";
@@ -29,7 +29,7 @@
        }
 
        window.onload = function() {
-           alert("Welcome to my website Family !");
+           alert("Welcome to my website Family!");
        };
    </script>
 </head>
@@ -39,3 +39,4 @@
    <button onclick="changeParagraphColor()">Change Color</button>
 </body>
 </html>
+
