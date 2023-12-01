@@ -17,7 +17,15 @@
    </style>
    <script>
        function changeParagraphColor() {
-           document.getElementById("myParagraph").style.color = "blue";
+           var paragraph = document.getElementById("myParagraph");
+           var currentColor = paragraph.style.color;
+           var originalColor = window.getComputedStyle(paragraph).getPropertyValue("color");
+
+           if (currentColor === "blue") {
+               paragraph.style.color = originalColor;
+           } else {
+               paragraph.style.color = "blue";
+           }
        }
 
        window.onload = function() {
