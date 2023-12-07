@@ -5,38 +5,48 @@
    <style>
        body {
            font-family: Arial, sans-serif;
-           margin: 40px;
-           background-color: #FF99CC;
+           margin: 0;
+           background-color: #FFC0CB; /* Lighter shade of pink for the background */
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
        }
-       h1 {
-           color: #333;
+       .ribbon {
+           background-color: #FF69B4; /* A darker shade of pink for the ribbon */
+           width: 80%;
+           height: 100px;
+           position: relative;
+           text-align: center;
+           line-height: 100px;
+           color: white;
+           font-size: 24px;
        }
-       p {
-           color: #666;
+       .ribbon:before, .ribbon:after {
+           content: "";
+           position: absolute;
+           top: 0;
+           border-width: 50px;
+           border-style: solid;
+       }
+       .ribbon:before {
+           left: -100px;
+           border-color: #FF1493 transparent transparent transparent; /* Different shade for ribbon edges */
+       }
+       .ribbon:after {
+           right: -100px;
+           border-color: #FF1493 transparent transparent transparent; /* Same as the other edge */
        }
    </style>
    <script>
-       function changeParagraphColor() {
-           var paragraph = document.getElementById("myParagraph");
-           var currentColor = paragraph.style.color;
-           var originalColor = window.getComputedStyle(paragraph).getPropertyValue("color");
-
-           if (currentColor === "blue" || currentColor === "") {
-               paragraph.style.color = originalColor;
-           } else {
-               paragraph.style.color = "blue";
-           }
-       }
-
        window.onload = function() {
            alert("Welcome to my website Family!");
        };
    </script>
 </head>
 <body>
-   <h1>Welcome to My Website!!!!</h1>
-   <p id="myParagraph">Work in progress!</p>
-   <button onclick="changeParagraphColor()">Change Color</button>
+   <div class="ribbon" id="myParagraph">Work in progress!</div>
 </body>
 </html>
+
 
