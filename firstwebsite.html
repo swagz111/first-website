@@ -4,45 +4,41 @@
    <title>My Website</title>
    <style>
        body {
-           font-family: Arial, sans-serif;
            margin: 0;
-           background-color: #FFC0CB; /* Lighter shade of pink for the background */
+           height: 100vh;
            display: flex;
            justify-content: center;
            align-items: center;
-           height: 100vh;
+           background-color: #FFC0CB; /* A soft pink background */
        }
        .ribbon {
-           background-color: #FF69B4; /* A darker shade of pink for the ribbon */
-           width: 80%;
-           height: 100px;
            position: relative;
-           text-align: center;
-           line-height: 100px;
-           color: white;
-           font-size: 24px;
+           width: 200px; /* Adjust as necessary */
+           height: 100px; /* Adjust as necessary */
+           background-color: #FADADD; /* A shade of pink that matches the ribbon */
+           display: flex;
+           justify-content: center;
+           align-items: center;
        }
-       .ribbon:before, .ribbon:after {
-           content: "";
+       .ribbon::after {
+           content: '';
            position: absolute;
-           top: 0;
-           border-width: 50px;
-           border-style: solid;
-       }
-       .ribbon:before {
-           left: -100px;
-           border-color: #FF1493 transparent transparent transparent; /* Different shade for ribbon edges */
-       }
-       .ribbon:after {
-           right: -100px;
-           border-color: #FF1493 transparent transparent transparent; /* Same as the other edge */
+           bottom: -10px; /* Adjust as necessary */
+           left: 50%;
+           width: 0;
+           height: 0;
+           border-left: 50px solid transparent; /* Adjust as necessary */
+           border-right: 50px solid transparent; /* Adjust as necessary */
+           border-top: 30px solid #FADADD; /* Adjust to match the ribbon color */
+           transform: translateX(-50%);
        }
    </style>
 </head>
 <body>
-   <div class="ribbon">Work in progress!</div>
+   <div class="ribbon"></div>
 </body>
 </html>
+
 
 
 
