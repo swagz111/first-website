@@ -19,11 +19,51 @@
            width: 500px; 
            height: 300px; 
        }
+
+       /* Confetti Styles */
+       .confetti {
+           position: fixed;
+           width: 5px;
+           height: 5px;
+           background-color: pink;
+           opacity: 0;
+           z-index: 9999;
+       }
+
+       @keyframes confetti {
+           0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+           100% { transform: translateY(500px) rotate(360deg); opacity: 0; }
+       }
    </style>
 </head>
 <body>
-   <div class="ribbon"></div>
+   <div id="ribbon" class="ribbon" onclick="createConfetti()"></div>
+
+   <script>
+   function createConfetti() {
+       for (let i = 0; i < 100; i++) {
+           const confetti = document.createElement('div');
+           confetti.className = 'confetti';
+
+           const x = Math.floor(Math.random() * window.innerWidth);
+           const size = Math.random() * 10;
+           const duration = Math.random() * 2;
+
+           confetti.style.left = `${x}px`;
+           confetti.style.width = `${size}px`;
+           confetti.style.height = `${size}px`;
+           confetti.style.animation = `confetti ${duration + 1}s linear`;
+
+           document.body.appendChild(confetti);
+
+           setTimeout(() => {
+               confetti.remove();
+           }, duration * 1000);
+       }
+   }
+   </script>
 </body>
 </html>
+
 
 
