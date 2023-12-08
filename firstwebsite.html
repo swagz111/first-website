@@ -23,8 +23,8 @@
        /* Confetti Styles */
        .confetti {
            position: fixed;
-           width: 10px;
-           height: 10px;
+           width: 15px;
+           height: 15px;
            background-color: pink;
            opacity: 0;
            z-index: 9999;
@@ -46,22 +46,22 @@
            confetti.className = 'confetti';
 
            const x = Math.floor(Math.random() * window.innerWidth);
-           const size = Math.random() * 10;
-           const duration = Math.random() * 4;
+           const size = Math.random() * 15 + 10; // Larger confetti pieces
+           const duration = Math.random() * 4 + 2; // Longer duration
 
            confetti.style.left = `${x}px`;
            confetti.style.width = `${size}px`;
            confetti.style.height = `${size}px`;
            confetti.style.animation = `confetti ${duration + 1}s linear`;
+           confetti.style.top = `-${size}px`; // Start from above the top of the screen
 
            document.body.appendChild(confetti);
 
            setTimeout(() => {
                confetti.remove();
-           }, duration * 1000);
+           }, (duration + 1) * 1000000); // Extend the time before removal
        }
    }
    </script>
 </body>
 </html>
-
