@@ -9,28 +9,15 @@
            display: flex;
            justify-content: center;
            align-items: center;
-           background-color: #FFC0CB; /* A soft pink background */
+           background-color: #FADADD;
        }
        .ribbon {
-           position: relative;
-           width: 200px; /* Adjust as necessary */
-           height: 100px; /* Adjust as necessary */
-           background-color: #FADADD; /* A shade of pink that matches the ribbon */
-           display: flex;
-           justify-content: center;
-           align-items: center;
-       }
-       .ribbon::after {
-           content: '';
-           position: absolute;
-           bottom: -10px; /* Adjust as necessary */
-           left: 50%;
-           width: 0;
-           height: 0;
-           border-left: 50px solid transparent; /* Adjust as necessary */
-           border-right: 50px solid transparent; /* Adjust as necessary */
-           border-top: 30px solid #FADADD; /* Adjust to match the ribbon color */
-           transform: translateX(-50%);
+           background-image: url('https://photos.app.goo.gl/HRMbRAY3oxQfdhKX7'); 
+           background-size: contain; 
+           background-repeat: no-repeat;
+           background-position: center;
+           width: 200px; 
+           height: 100px; 
        }
    </style>
 </head>
@@ -38,7 +25,5 @@
    <div class="ribbon"></div>
 </body>
 </html>
-
-
 
 
