@@ -23,8 +23,8 @@
        /* Confetti Styles */
        .confetti {
            position: fixed;
-           width: 5px;
-           height: 5px;
+           width: 10px;
+           height: 10px;
            background-color: pink;
            opacity: 0;
            z-index: 9999;
@@ -47,7 +47,7 @@
 
            const x = Math.floor(Math.random() * window.innerWidth);
            const size = Math.random() * 10;
-           const duration = Math.random() * 2;
+           const duration = Math.random() * 4;
 
            confetti.style.left = `${x}px`;
            confetti.style.width = `${size}px`;
